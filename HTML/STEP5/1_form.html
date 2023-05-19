@@ -107,7 +107,52 @@
                      -->
                  </li>
             </ul>
+         </fieldset>
+         <fieldset>
+            <legend>HTML5 Input</legend>
+            <label for="userName">이름 :</label>
+            <input type="text" id="userName" maxlength="8" placeholder="8자미만" autofocus readonly required>
+            <!-- ? required : 필수입력 필드, maxlength : 최대글자 제한, autofocus : 자동초점,  
+                ?  readonly : 읽기전용(ex>회원정보수정 등에서 수정 금지필드 등)
+            -->
+            <input type="email" placeholder="undifined@naver.com">
+            <!-- ? type을 url로 설정하면, 모바일에서 해당 필드에 focus 되었을 때,
+                ? 키보드를 열면서 영문과 @버튼이 생긴다. placeholder(ie10이하 지원불가)
+             -->
+             <input type="url" placeholder="http://naver.com">
+             <!-- 
+                ? type을 url로 설정하면, 모바일에서 해당 필드에 focus되었을때,
+                ? 기보드를 열면서 영문과 .com 버튼이 생기고 누르고 있으면 타 도메인으로 변경가능.
+              -->
+              <input type="number" min="10" max="100" step="10" value="0">
+              <!-- ? 상,하버튼으로 숫자를 기입하는 스핀박스를 생성한다. min = 최저값, max = 최대값, 
+                    ? step = 상승값, value = 초기값 
+            -->
+              <input type="range" min="-2" max="2" step="1" value="0">
+              <!-- ? 슬라이드바 로 숫자를 기입하는 막대를 생성한다. 
+                   ? min = 최저값, max = 최대값, step = 상승값, value = 초기값 
+            -->
+              <input type="date">
+              <!-- ? 연도, 월, 날짜 선택 -->
+              <input type="month">
+              <!-- ? 연도, 월 선택 -->
+              <input type="week">
+              <!-- ? 연도, 주 선택 -->
+              <input type="time">
+              <!-- ? 시간 입력 -->
+              <input type="datetime">
+              <!-- ? 대부분 브라우저 지원불가 -->
+              <input type="datetime-local">
+              <!-- ? 연도, 월, 날짜, 시간 선택 -->
+              <input type="search" placeholder="검색어를 입력하세요" autocomplete="on">
+              <!-- ? type을 search로 설정하면 x 버튼이 우측에 생기며
+                   ? 자동완성기능(autocomplete)은 기본값은 on,off로 끌수있다.
+                   ? style 이 safari에서 적용안됨.
+            -->
 
+              <label for="typeColor">색상선택 :</label>
+              <input type="color" id="typeColor">
+              <!-- ? 컬러피커창 생성  -->
          </fieldset>
 
     </form>
